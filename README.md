@@ -1,25 +1,23 @@
-# GitHubSetup — 20 Termux Designs
+# GitHubSetup — 20 Termux Color Themes + 20 Styles
 
-Give your Android Termux terminal a clean, professional look. Choose from **20 ready-made themes** with matching terminal colors, welcome banners, and command prompts.
+Give your Android Termux terminal a complete makeover. GitHubSetup combines **20 color palettes with 20 matching prompt layouts** for 20 ready-to-use looks.
 
 ## Features
 
-- 20 selectable designs — neon, cyber, ocean, forest, sunset, monochrome and more.
-- Interactive numbered menu with a preview of each theme.
-- Matching Termux background, foreground, cursor and 16 terminal colors.
-- Custom welcome banner and readable shell prompt.
-- Safe setup: backs up existing Termux color settings and adds one marked startup line instead of replacing your whole `.bashrc`.
-- Re-run anytime to switch designs.
+- 20 selectable color themes: Cyber Blue, Neon Green, Purple Haze, Crimson Red, Arctic White, Ocean Deep, Matrix Lime, Sunset Glow, Royal Gold, Midnight Rose, Dracula Violet, Forest Green, Solar Orange, Ice Cyan, Graphite, Sakura Pink, Galaxy, Emerald, Amber Terminal and Minimal Dark.
+- 20 different terminal prompt styles: framed, double-line, minimal, arrow, bracket, wave, retro, powerline-inspired and more.
+- Matching terminal background, foreground, cursor and ANSI palette.
+- Custom welcome banner showing the selected theme and style.
+- Interactive numbered menu with theme and style names.
+- Backs up existing Termux colors before changing them.
+- Adds one clearly marked loader to `.bashrc` without replacing the rest of the file.
+- Re-run any time to choose another design.
 - Restore option to remove the custom prompt and restore the saved colors.
-- No root required; no hacking tools or unnecessary packages installed.
-
-## Requirements
-
-- Android with Termux installed.
-- Recommended: current Termux from F-Droid or the official Termux GitHub releases.
-- Run the commands inside Termux, not in a computer terminal.
+- No root required and no unnecessary packages installed.
 
 ## Install
+
+Run these commands inside Termux:
 
 ```bash
 pkg update -y
@@ -29,47 +27,18 @@ cd GitHubSetup
 bash setup.sh
 ```
 
-Or run the script directly:
+Choose any number from 1–20. Each number applies its matching color palette, welcome banner and prompt style. Open a new Termux session or run `source ~/.bashrc` to see the new prompt. If colors do not refresh, close and reopen Termux.
 
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/Xcyberking/GitHubSetup/main/setup.sh)
-```
+## Restore original settings
 
-## The 20 designs
+Run `bash setup.sh` again and choose `0) Restore original settings`.
 
-1. Cyber Blue
-2. Neon Green
-3. Purple Haze
-4. Crimson Red
-5. Arctic White
-6. Ocean Deep
-7. Matrix Lime
-8. Sunset Glow
-9. Royal Gold
-10. Midnight Rose
-11. Dracula Violet
-12. Forest Green
-13. Solar Orange
-14. Ice Cyan
-15. Graphite
-16. Sakura Pink
-17. Galaxy
-18. Emerald
-19. Amber Terminal
-20. Minimal Dark
+## Safety notes
 
-Choose a number from the menu. The script applies the theme and tells you to restart Termux or open a new session if the terminal colors do not refresh immediately.
-
-## Restore
-
-Run the setup script again and choose **Restore original settings**. The script removes only its own marked startup entry and restores the color backup when one exists.
-
-## Safety and notes
-
+- The script is intended to run inside Termux.
+- It changes user-level Termux appearance files under `$HOME`.
+- It does not require root, collect data, or install hacking tools.
 - Review scripts before running them.
-- The script changes only Termux user configuration under your home directory.
-- It does not request root, collect data, change Android settings, or install security tools.
-- Termux color settings may require reopening the app to refresh.
 
 ## License
 
